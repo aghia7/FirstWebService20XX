@@ -55,9 +55,6 @@ public class User {
         this.gender = gender;
     }
 
-    public void myFunction() {
-
-    }
 
     @Override
     public String toString() {

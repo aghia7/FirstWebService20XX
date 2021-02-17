@@ -15,6 +15,7 @@ public class UserController {
     private IUserRepository repo;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getAllUsers() {
         List<User> users;
         try {
@@ -32,6 +33,7 @@ public class UserController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(User user) {
         boolean created;
         try {
@@ -55,6 +57,7 @@ public class UserController {
 
     @GET
     @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getUser(@PathParam("id") int id) {
         User user;
         try {
